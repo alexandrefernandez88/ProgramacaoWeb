@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <title>Consumo</title><!-- ajustado -->
+    </head>
+    <body>
+		<div class="container">
+            <br>
+			<h2>Cadastrar Consumo Hóspede</h2><!-- ajustado -->
+            <br>
+			<p>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#checkinModal" onclick="limpaFormulario()">
+                    Novo Cadastro de Consumo<!-- ajustado -->
+                </button>
+                <button type="button" class="btn btn-outline-secondary" id="btnVoltar" onclick="history.back()">Voltar</button>
+			</p>
+			<span id="msg"></span>
+            <span id="conteudo"></span><br><br><br>
+		</div>
+        <div class="modal fade" id="checkinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" onshow="carregarSelect()">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de Consumo</h1><!-- ajustado -->
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span id="msgModal"></span><br>
+                    <form role="form" id="frmConsumo" method="post" action="#" class="row g-3 needs-validation" novalidate><!-- ajustado o id-->
+                        <input type="text" class="form-control" id="idConsumo" name="idConsumo" value="" hidden> <!-- ajustado o id e o name-->
+                        <div class="col-md-12">
+                            <label for="Cliente" class="form-label">Hóspede</label>
+                            <select class="form-select" id="Cliente" name="Cliente" required>
+                                <option selected  disabled value="">Selecione o hóspede...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="Quarto" class="form-label">Quarto</label>
+                            <select class="form-select" id="Quarto" name="Quarto" required>
+                                <option selected  disabled value="">Selecione o quarto...</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="DataConsumo" class="form-label">Data do consumo</label><!-- ajustado o for-->
+                            <input type="date" class="form-control" id="DataConsumo" name="DataConsumo" value="" required> <!-- ajustado o id e name-->
+                        </div>
+                        <div class="col-md-12"><!-- ajustado div inteira nova-->
+                            <label for="Item" class="form-label">Selecione o Item</label>
+                            <select class="form-select" id="Item" name="Item" required>
+                                <option selected  disabled value="">Selecione o item...</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="btnFechar" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn btn-warning" id="btnAtualizar"  disabled>Atualizar</button>
+                            <button type="submit" name="btnSalvar" id="btnSalvar" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="./js/scriptConsumo.js"></script>
+</html>

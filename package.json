@@ -1,0 +1,19 @@
+{
+  "name": "projeto-atv-2",
+  "version": "1.0.0",
+  "description": "Projeto atividade 2 sobre a persistencia dos dados em banco de dados MySql",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexandre Fernandez",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3"
+  }
+}
